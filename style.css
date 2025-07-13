@@ -1,11 +1,39 @@
+/* Estilos generales */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f8f8f8;
-  text-align: center;
+  background: #f3f0ff;
+  color: #2b2d42;
   padding: 20px;
+  text-align: center;
 }
 
-.malla {
+h1 {
+  color: #5f0f40;
+  margin-bottom: 30px;
+}
+
+#malla {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.semestre {
+  background: #e0aaff;
+  border: 2px solid #b388eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.semestre h2 {
+  color: #3c096c;
+  margin-bottom: 10px;
+}
+
+.ramos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,32 +41,47 @@ body {
 }
 
 .ramo {
-  background: #d1eaff;
+  background: #cdb4db;
   border-radius: 10px;
-  padding: 15px;
-  width: 150px;
+  padding: 10px;
+  min-width: 150px;
+  max-width: 200px;
   cursor: pointer;
-  box-shadow: 2px 2px 5px #ccc;
-  transition: transform 0.2s;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
 }
 
 .ramo:hover {
-  transform: scale(1.05);
-  background: #a8dcff;
+  background: #b185db;
 }
 
+.ramo.aprobado {
+  background: #a3f7bf !important;
+  border-color: #3a7d44;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.ramo.bloqueado {
+  background: #d3d3d3;
+  color: #888;
+  pointer-events: none;
+}
+
+/* Botones o información extra */
 #info-box {
-  position: fixed;
-  top: 20%;
-  left: 30%;
-  width: 40%;
-  padding: 20px;
-  background: white;
-  border: 2px solid #007acc;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  margin-top: 20px;
 }
 
-.oculto {
-  display: none;
+button {
+  padding: 8px 12px;
+  background: #7b2cbf;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5a189a;
 }
