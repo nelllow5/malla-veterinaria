@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.querySelector('.grid');
+
   const malla = {
     "Bioestadística": ["Matemáticas General"],
     "Bioquímica": ["Química"],
@@ -55,14 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "10° Semestre": ["Farmacología Aplicada", "Salud Pública", "Trabajo de Titulación", "Clínica de Animales Menores", "Clínica de Animales Mayores"]
   };
 
-  const grid = document.querySelector('.grid');
-
   Object.entries(semestres).forEach(([semestre, ramos]) => {
     const card = document.createElement('div');
     card.className = 'semestre';
     card.innerHTML = `<h2>${semestre}</h2>`;
     const cont = document.createElement('div');
     cont.className = 'ramos';
+
     ramos.forEach(nombre => {
       const div = document.createElement('div');
       div.className = 'ramo bloqueado';
@@ -70,8 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
       div.dataset.nombre = nombre;
       cont.appendChild(div);
     });
+
     card.appendChild(cont);
-    grid.appendChild(card);
+    document.querySelector('.grid').appendChild(card);
   });
 
   function actualizarEstados() {
