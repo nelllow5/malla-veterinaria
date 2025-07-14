@@ -1,87 +1,53 @@
-/* Estilos generales */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f3f0ff;
-  color: #2b2d42;
-  padding: 20px;
-  text-align: center;
+  background: #f4f4f4;
+  color: #333;
+  padding: 30px;
+  text-align: centro;
+  margen: 0;
 }
 
-h1 {
-  color: #5f0f40;
-  margin-bottom: 30px;
+H1 {
+  margen-abajo: 40Px;
+  color: #007acc;
 }
 
-#malla {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.malla {
+  display: Flex;
+ Envoltura flexible: envoltura;
+ Justificar-contenido.: centro;
+  brecha: 30Px;
 }
 
 .semestre {
-  background: #e0aaff;
-  border: 2px solid #b388eb;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 0 auto;
-  width: 90%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  Fondo: #ffffff;
+  frontera-radio: 15Px;
+    sombra de caja: 0 4  Px 8px rgba(,);
+   relleno: 20 relleno: 2020Px;
+  ancho: 250Px;
+  transición: transformar 0.2s facilidad;
+}
+
+.semestre:flotar {
+  transformar: escalar(1.03);
 }
 
 .semestre h2 {
-  color: #3c096c;
-  margin-bottom: 10px;
-}
-
-.ramos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  Fuente-tamaño: 1.1em;
+  margen-abajo: 15Px;
+  color: #444;
 }
 
 .ramo {
-  background: #cdb4db;
-  border-radius: 10px;
-  padding: 10px;
-  min-width: 150px;
-  max-width: 200px;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
+  Fondo: #d1eaff;
+  frontera-radio: 10Px;
+  relleno: 10Px;
+  margen-abajo: 10Px;
+  cursor: puntero;
+  transición: 0.3s facilidad;
 }
 
-.ramo:hover {
-  background: #b185db;
-}
-
-.ramo.aprobado {
-  background: #a3f7bf !important;
-  border-color: #3a7d44;
-  font-weight: bold;
-  text-decoration: line-through;
-}
-
-.ramo.bloqueado {
-  background: #d3d3d3;
-  color: #888;
-  pointer-events: none;
-}
-
-/* Botones o información extra */
-#info-box {
-  margin-top: 20px;
-}
-
-button {
-  padding: 8px 12px;
-  background: #7b2cbf;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #5a189a;
+.ramo:flotar {
+  Fondo: #a8dcff;
+  fuente-peso: audaz;
 }
