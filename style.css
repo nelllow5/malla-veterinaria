@@ -1,13 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient to right, #e0f2f7, #e8d0e8; /* Tonos azules y morados claros */
+    background: linear-gradient(to right, #e0f2f7, #e8d0e8); /* Tonos azules y morados claros */
     color: #333;
     margin: 0;
     padding: 20px;
-    display: flex;
+    display: flex; /* Usamos flexbox para centrar el contenedor principal */
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Alinea al inicio verticalmente */
     min-height: 100vh;
+    box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño total */
 }
 
 .container {
@@ -18,6 +19,7 @@ body {
     max-width: 1200px;
     width: 100%;
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -48,14 +50,15 @@ h3 {
 }
 
 .semester {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    display: grid; /* Importante: Usamos Grid para los ramos dentro del semestre */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre los ramos */
     margin-bottom: 30px;
     padding: 15px;
     background-color: #f3e5f5; /* Fondo más claro para semestres */
     border-radius: 8px;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
 }
 
 .course {
@@ -71,6 +74,11 @@ h3 {
     border: 2px solid #64b5f6; /* Borde azul */
     position: relative;
     overflow: hidden;
+    min-height: 80px; /* Asegura una altura mínima para todos los cuadros */
+    display: flex; /* Usamos flexbox para centrar el contenido del ramo */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .course:hover:not(.approved):not(.locked) {
